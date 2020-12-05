@@ -15,7 +15,8 @@ public class Main {
         pupil.setRating(5); //сетим рейтинг
         System.out.println("Rating set " + pupil.getRating()); //получаем рейтинг
 
-        pupil.Answer(); //метод answer
+        pupil.answer(); //метод answer
+        pupil.eat(); //кушаем
 
         //pupil.Eat() и pupil.Prepare недоступны потому что эти методы приватные
     }
