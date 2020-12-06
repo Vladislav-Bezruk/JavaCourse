@@ -2,67 +2,61 @@ package com.javacourse.hw2;
 
 public class Pupil {
 
-    private static int _age; //возраст
-    private static String _name; //имя
-    private static int _classroom; //номер
-    private static int _rating; //рейтинг
+    private int age; //возраст
+    private String name; //имя
+    private int classroom; //номер
+    private int rating; //рейтинг
 
-    final static int defAge = 18; //стандартный возраст на случай невалидности
-    final static String defName = "Bill"; //стандартное имя на случай невалидности
-    final static int defClassroom = 5; //стандартный номер на случай невалидности
-    final static int defRating = 4; //стандартный рейтинг на случай невалидности
-
-    public void Answer() { //отвечаем у доски
+    public void answer() { //отвечаем у доски
         System.out.println("Now I will answer in the boards , but I need to prepare");
-        Prepare();
-        System.out.println("I'm hungry, so I'll eat");
-        Eat();
+        prepare();
         System.out.println("I answered at the board, I got five points!");
     }
 
-    private void Prepare() { //готовимся отвечать
-        System.out.println("Now I'm preparing");
-        System.out.println("I'm ready to answer!");
-    }
-
-    private void Eat() { //кушаем
+    public void eat() {
+        System.out.println("I'm hungry, so I'll eat");
         System.out.println("Now I'm eating");
         System.out.println("I'm not hungry now!");
     }
 
+    private void prepare() { //готовимся отвечать
+        System.out.println("Now I'm preparing");
+        System.out.println("I'm ready to answer!");
+    }
+
     public int getAge() { //гетер возраста
-        return _age;
+        return age;
     }
 
     public void setAge(int age) { //сетер возраста
-        if (age > 0 && age < 150) _age = age;
-        else _age = defAge;
+        if (age > 0 && age < 150) this.age = age;
+        else this.age = 17;
     }
 
     public String getName() { //гетер имени
-        return _name;
+        return name;
     }
 
     public void setName(String name) { //сетер имени
-        if (name != "") _name = name;
-        else _name = defName;
+        if (name != "") this.name = name;
+        else this.name = "Student";
     }
 
     public int getClassroom() { //гетер комнаты
-        return _classroom;
+        return classroom;
     }
 
     public void setClassroom(int classroom) { //сетер комнаты
-        if (classroom > 0 && classroom < 20) _classroom = classroom;
-        else _classroom = defClassroom;
+        if (classroom > 0 && classroom < 20) this.classroom = classroom;
+        else this.classroom = 10;
     }
 
     public int getRating() { //гетер рейтинга
-        return _rating;
+        return rating;
     }
 
     public void setRating(int rating) { //сетер рейтинга
-        if (rating > 0 && rating <= 5) _rating = rating;
-        else _rating = defRating;
+        if (rating > 0 && rating <= 5) this.rating = rating;
+        else this.rating = 2;
     }
 }
