@@ -2,10 +2,10 @@ package com.javacourse.hw2;
 
 public class Pupil {
 
-    private int _age; //возраст
-    private String _name; //имя
-    private int _classroom; //номер
-    private int _rating; //рейтинг
+    private int age; //возраст
+    private String name; //имя
+    private int classroom; //номер
+    private int rating; //рейтинг
 
     public void answer() { //отвечаем у доски
         System.out.println("Now I will answer in the boards , but I need to prepare");
@@ -25,38 +25,38 @@ public class Pupil {
     }
 
     public int getAge() { //гетер возраста
-        return _age;
+        return age;
     }
 
     public void setAge(int age) { //сетер возраста
-        if (age > 0 && age < 150) _age = age;
-        else _age = 17;
+        if (age > 0 && age < 150) this.age = age;
+        else this.age = 17;
     }
 
     public String getName() { //гетер имени
-        return _name;
+        return name;
     }
 
     public void setName(String name) { //сетер имени
-        if (name != "") _name = name;
-        else _name = "Student";
+        if (name != "") this.name = name;
+        else this.name = "Student";
     }
 
     public int getClassroom() { //гетер комнаты
-        return _classroom;
+        return classroom;
     }
 
     public void setClassroom(int classroom) { //сетер комнаты
-        if (classroom > 0 && classroom < 20) _classroom = classroom;
-        else _classroom = 10;
+        if (classroom > 0 && classroom < 20) this.classroom = classroom;
+        else this.classroom = 10;
     }
 
     public int getRating() { //гетер рейтинга
-        return _rating;
+        return rating;
     }
 
     public void setRating(int rating) { //сетер рейтинга
-        if (rating > 0 && rating <= 5) _rating = rating;
-        else _rating = 2;
+        if (rating > 0 && rating <= 5) this.rating = rating;
+        else this.rating = 2;
     }
 }
